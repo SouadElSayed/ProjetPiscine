@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1555405333 source:c:\users\marie leygue\desktop\projet\coords.cpp
+	"coords.h"
+	<iostream>
+
+1555405333 c:\users\marie leygue\desktop\projet\coords.h
+
+1555522555 source:c:\users\marie leygue\desktop\projet\graphe.cpp
+	<fstream>
+	<iostream>
+	"Graphe.h"
+	"sommet.h"
+	<vector>
+	<list>
+	<string>
+	<algorithm>
+	"svgfile.h"
+
+1555522424 c:\users\marie leygue\desktop\projet\graphe.h
+	<string>
+	<unordered_map>
+	"sommet.h"
+	"arete.h"
+	<iostream>
+	<vector>
+	<algorithm>
+
+1555512754 c:\users\marie leygue\desktop\projet\sommet.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	"Coords.h"
+
+1555522572 source:c:\users\marie leygue\desktop\projet\main.cpp
+	<iostream>
+	"Graphe.h"
+	<vector>
+	<list>
+	<string>
+	<algorithm>
+	"svgfile.h"
+
+1555405333 source:c:\users\marie leygue\desktop\projet\svgfile.cpp
+	"svgfile.h"
+	<iostream>
+	<sstream>
+
+1555405333 c:\users\marie leygue\desktop\projet\svgfile.h
+	<string>
+	<fstream>
+	<set>
+
+1555517570 source:c:\users\marie leygue\desktop\projet\sommet.cpp
+	<iostream>
+	<queue>
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
+	"Coords.h"
+
+1555521800 source:c:\users\marie leygue\desktop\projet\arete.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"arete.h"
+	"Coords.h"
+	"Sommet.h"
+
+1555517846 c:\users\marie leygue\desktop\projet\arete.h
+	"Coords.h"
+	"sommet.h"
+	<string>
+	<iostream>
+	<sstream>
+
