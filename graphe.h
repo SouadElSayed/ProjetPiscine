@@ -16,14 +16,46 @@ class Graphe
     private:
         std::vector <Arete*> edges ;    /// vecteur d'aretes
         std::vector<Sommet*> sommets ;  /// vecteur de sommets
+        //std::vector<std::pair<int,arete>> graphe; // graphe
+        //std::vector<std::pair<int,arete>> arbre; // MST
+        //int *pred;
+        //int sommet; // nb de sommets
+        /// Le réseau est constitué d'une collection de sommets
+        //std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
 
     public:
-        Graphe(std::string fichier, std::string fichier_poids);
-        void afficher() const;
-        //void AjouterArete(int u,int v,int w);
-        //int find_set(int i);
-        //void union_set(int u, int v);
+        Graphe(std::string fichier, std::string fichier_poids);//std::string fichier_poids);
+        void afficher(Svgfile& svgout) const;
+        void AjouterArete(int u,int v,int w);//nb,Arete edge);
+        int find_set(int i);
+        void union_set(int u, int v);
         void kruskal();
+        void triCout1();
+        void triCout2();
+        Graphe();
+        //struct ordreCout1;
+        //struct ordreCout2;
+        //void afficher();
 };
+
+
+/*
+class graphe
+{
+    public:
+        ///constructeur qui charge le graphe en mémoire
+        //format du fichier ordre/liste des sommets/taille/liste des arêtes
+        graphe(std::string);
+        ~graphe();
+        void afficher() const;
+
+    private:
+        /// Le réseau est constitué d'une collection de sommets
+        std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
+        /// Vecteur Aretes
+        std::vector <Arete*> edges ;
+
+};
+*/
 
 #endif // GRAPHE_H_INCLUDED

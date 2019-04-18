@@ -2,12 +2,17 @@
 #include <iostream>
 #include "Graphe.h"
 #include "sommet.h"
+#include "arete.h"
 #include <vector>
 #include <list>
 #include <string>
 #include <algorithm>
 #include "svgfile.h"
 
+Graphe::Graphe()
+{
+
+}
 
 Graphe::Graphe(std::string fichier, std::string fichier_poids)
 {
@@ -47,7 +52,7 @@ Graphe::Graphe(std::string fichier, std::string fichier_poids)
 
     int idsom1;
     int idsom2;
-    std::vector<float> poids;
+    //std::vector<float> poids;
 
     for (int i=0; i<taille; ++i)
     {
@@ -58,11 +63,13 @@ Graphe::Graphe(std::string fichier, std::string fichier_poids)
         ifs2 >> indarr;
         ifs2 >> cout1;
         ifs2 >> cout2;
-        poids.push_back(cout1);
-        poids.push_back(cout2);
-        edges.push_back(new Arete{indarr,sommets[idsom1], sommets[idsom2], poids});
-        poids.clear();
+        //poids.push_back(cout1);
+        //poids.push_back(cout2);
+        edges.push_back(new Arete{indarr,sommets[idsom1], sommets[idsom2], cout1, cout2});
+        //cout1.clear();
+        //cout2.clear();
     }
+
 
 
 
@@ -84,35 +91,59 @@ Graphe::Graphe(std::string fichier, std::string fichier_poids)
 }
 
 
-void Graphe::afficher() const
+void Graphe::afficher(Svgfile& svgout) const
 {
-    std::cout<<"graphe : " << std::endl << std::endl;
+   std::cout<<"graphe : " << std::endl << std::endl;
     std::cout<<"  ordre : "<< sommets.size() <<std::endl;
-    std::cout<<"  sommets : " <<std::endl;
-
+    std::cout<<"  sommet : " <<std::endl;
 
     for (auto i: sommets)
     {
         i->afficherData();
+        i->dessiner(svgout);
     }
-    for (auto i: edges)
-    {
-        i->afficherEdges();
-    }
+
+    for (auto i:edges)
+         {
+          i->afficherEdges(svgout);
+         }
+
 }
-/*
+
+struct ordreCout1
+{
+    inline bool operator() (const Arete* cout1, const Arete* cout2)
+    {
+        return (cout1->getCout1()< cout2->getCout1());
+    }
+};
+
+struct ordreCout2
+{
+    inline bool operator() (const Arete* c1, const Arete* c2)
+    {
+        return (c1->getCout2()< c2->getCout2());
+    }
+};
+
+void Graphe::triCout1()
+{
+    std::sort(edges.begin(),edges.end(),ordreCout1());
+}
+
+void Graphe::triCout2()
+{
+    std::sort(edges.begin(),edges.end(), ordreCout2());
+}
+
+
 void Graphe::kruskal()
 {
-    int i, uRep, vRep;
-    std::sort(g.begin(), g.end()); // on trie le graphe dans l'ordre croissant
-    for (i=0; i<graphe.size(); i++)
+    Graphe g;
+    g.triCout1();
+    g.triCout2();
+    for (auto ar : edges)
     {
-        uRep = find_set(graphe[i].second.first);
-        vRep = find_set(graphe[i].second.second);
-        if (uRep != vRep)
-        {
-            arbre.push_back(graphe[i]); // on l'ajoute a l'arbre deja existant
-            union_set(uRep, vRep);      // on unit les 2 portions
-        }
+         ar->afficher();
     }
-}*/
+}

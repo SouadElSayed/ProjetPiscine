@@ -4,6 +4,7 @@
 #include<unordered_set>
 #include "sommet.h"
 #include "Coords.h"
+#include "svgfile.h"
 
 
 Sommet::Sommet(int id,int x,int y)
@@ -17,7 +18,11 @@ void Sommet::afficherData() const
 {
     std::cout<<"    "<<m_id<<" : "<<"(x,y)=("<<m_x<<","<<m_y<<")"<<std::endl;
 }
-
+void Sommet::dessiner(Svgfile& svgout)
+{
+    svgout.addDisk(m_x,m_y,20);
+    svgout.addText(m_x,m_y,m_id,"white");
+}
 
 Sommet::~Sommet()
 {

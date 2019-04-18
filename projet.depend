@@ -5,7 +5,7 @@
 
 1555405333 c:\users\marie leygue\desktop\projet\coords.h
 
-1555522555 source:c:\users\marie leygue\desktop\projet\graphe.cpp
+1555518329 source:c:\users\marie leygue\desktop\projet\graphe.cpp
 	<fstream>
 	<iostream>
 	"Graphe.h"
@@ -16,7 +16,7 @@
 	<algorithm>
 	"svgfile.h"
 
-1555522424 c:\users\marie leygue\desktop\projet\graphe.h
+1555516957 c:\users\marie leygue\desktop\projet\graphe.h
 	<string>
 	<unordered_map>
 	"sommet.h"
@@ -32,7 +32,7 @@
 	<unordered_set>
 	"Coords.h"
 
-1555522572 source:c:\users\marie leygue\desktop\projet\main.cpp
+1555515056 source:c:\users\marie leygue\desktop\projet\main.cpp
 	<iostream>
 	"Graphe.h"
 	<vector>
@@ -59,7 +59,7 @@
 	"sommet.h"
 	"Coords.h"
 
-1555521800 source:c:\users\marie leygue\desktop\projet\arete.cpp
+1555518083 source:c:\users\marie leygue\desktop\projet\arete.cpp
 	<string>
 	<iostream>
 	<sstream>
@@ -71,6 +71,156 @@
 	"Coords.h"
 	"sommet.h"
 	<string>
+	<iostream>
+	<sstream>
+
+1555526123 source:c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\arete.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"arete.h"
+	"Coords.h"
+	"Sommet.h"
+
+1555526096 c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\arete.h
+	"Coords.h"
+	"sommet.h"
+	<string>
+	<iostream>
+	<sstream>
+
+1555487796 c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\coords.h
+
+1555524404 c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\sommet.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	"Coords.h"
+	"sommet.h"
+	"svgfile.h"
+
+1555526141 source:c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\graphe.cpp
+	<fstream>
+	<iostream>
+	"Graphe.h"
+	"sommet.h"
+	"arete.h"
+	<vector>
+	<list>
+	<string>
+	<algorithm>
+	"svgfile.h"
+
+1555524546 c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\graphe.h
+	<string>
+	<unordered_map>
+	"sommet.h"
+	"arete.h"
+	<iostream>
+	<vector>
+	<algorithm>
+
+1555523326 c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\svgfile.h
+	<string>
+	<fstream>
+	<set>
+
+1555526069 source:c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\main.cpp
+	<iostream>
+	"Graphe.h"
+	<vector>
+	<list>
+	<string>
+	<algorithm>
+	"svgfile.h"
+
+1555522844 source:c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\sommet.cpp
+	<iostream>
+	<queue>
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
+	"Coords.h"
+	"svgfile.h"
+
+1555523306 source:c:\users\laoua\onedrive\bureau\projet-20190417t155910z-001\projet\svgfile.cpp
+	"svgfile.h"
+	<iostream>
+	<sstream>
+
+1555593301 source:c:\users\laoua\onedrive\bureau\projet test\projet\arete.cpp
+	<string>
+	<iostream>
+	<sstream>
+	"arete.h"
+	"Coords.h"
+	"Sommet.h"
+
+1555593301 c:\users\laoua\onedrive\bureau\projet test\projet\arete.h
+	"Coords.h"
+	"sommet.h"
+	<string>
+	<iostream>
+	<sstream>
+
+1555499294 c:\users\laoua\onedrive\bureau\projet test\projet\coords.h
+
+1555499302 c:\users\laoua\onedrive\bureau\projet test\projet\sommet.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	"Coords.h"
+	"sommet.h"
+	"svgfile.h"
+
+1555499302 c:\users\laoua\onedrive\bureau\projet test\projet\svgfile.h
+	<string>
+	<fstream>
+	<set>
+
+1555593439 source:c:\users\laoua\onedrive\bureau\projet test\projet\graphe.cpp
+	<fstream>
+	<iostream>
+	"Graphe.h"
+	"sommet.h"
+	"arete.h"
+	<vector>
+	<list>
+	<string>
+	<algorithm>
+	"svgfile.h"
+
+1555593421 c:\users\laoua\onedrive\bureau\projet test\projet\graphe.h
+	<string>
+	<unordered_map>
+	"sommet.h"
+	"arete.h"
+	<iostream>
+	<vector>
+	<algorithm>
+
+1555593421 source:c:\users\laoua\onedrive\bureau\projet test\projet\main.cpp
+	<iostream>
+	"Graphe.h"
+	<vector>
+	<list>
+	<string>
+	<algorithm>
+	"svgfile.h"
+
+1555499300 source:c:\users\laoua\onedrive\bureau\projet test\projet\sommet.cpp
+	<iostream>
+	<queue>
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
+	"Coords.h"
+	"svgfile.h"
+
+1555499302 source:c:\users\laoua\onedrive\bureau\projet test\projet\svgfile.cpp
+	"svgfile.h"
 	<iostream>
 	<sstream>
 

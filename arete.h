@@ -13,13 +13,20 @@ class Arete
         int m_id ;
         Sommet* m_som1;
         Sommet* m_som2;
-        std::vector<float> m_poids;
+        float m_cout1;
+        float m_cout2;
+        //std::vector<float> m_poids;
 
     public:
         Arete();
-        Arete(int id, Sommet* som1, Sommet* som2, std::vector<float> poids);
-        void afficherEdges() const;
+        Arete(int id, Sommet* som1, Sommet* som2, float cout1, float cout2);//std::vector<float> poids);
+        void afficherEdges(Svgfile &svg) const;
+        void afficher() const;
         ~Arete();
+        int getId() const {return m_id;};
+        float getCout1() const {return m_cout1;};
+        float getCout2() const {return m_cout2;};
+
 };
 
 
