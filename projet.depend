@@ -374,7 +374,7 @@
 	<iostream>
 	<sstream>
 
-1555669840 source:c:\users\marie leygue\desktop\kruskal ptn de merde\arete.cpp
+1555674300 source:c:\users\marie leygue\desktop\kruskal ptn de merde\arete.cpp
 	<string>
 	<iostream>
 	<sstream>
@@ -405,7 +405,7 @@
 	<fstream>
 	<set>
 
-1555671400 source:c:\users\marie leygue\desktop\kruskal ptn de merde\graphe.cpp
+1555700777 source:c:\users\marie leygue\desktop\kruskal ptn de merde\graphe.cpp
 	<fstream>
 	<iostream>
 	"Graphe.h"
@@ -417,7 +417,7 @@
 	<algorithm>
 	"svgfile.h"
 
-1555670340 c:\users\marie leygue\desktop\kruskal ptn de merde\graphe.h
+1555700184 c:\users\marie leygue\desktop\kruskal ptn de merde\graphe.h
 	<string>
 	<unordered_map>
 	"sommet.h"
@@ -425,8 +425,9 @@
 	<iostream>
 	<vector>
 	<algorithm>
+	<bitset>
 
-1555670754 source:c:\users\marie leygue\desktop\kruskal ptn de merde\main.cpp
+1555700904 source:c:\users\marie leygue\desktop\kruskal ptn de merde\main.cpp
 	<iostream>
 	"Graphe.h"
 	<vector>

@@ -22,6 +22,7 @@ void Arete::afficher() const
 void Arete::afficherEdges(Svgfile& svg) const
 {
     svg.addLine(m_som1->getX(),m_som1->getY(),m_som2->getX(),m_som2->getY(),"black");
+    //svg.addText(m_som1->getX()+20,m_som1->getY(),m_poids,"black");
 }
 
 void Arete::afficherKruska(Svgfile& svg) const

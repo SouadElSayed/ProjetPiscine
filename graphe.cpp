@@ -121,7 +121,7 @@ void Graphe::afficher(Svgfile& svgout) const
 
 bool trierAretes(Arete* a1, Arete* a2)
 {
-    return a1->getPoids().at(0) < a2->getPoids().at(0);
+    return a1->getPoids().at(0) < a2->getPoids().at(0);     /// Mettre 1 a la place de 0 si on veut l'arbre couvrant en fct du cout 2
 }
 
 void Graphe::kruskal(Graphe g)
@@ -152,27 +152,19 @@ void Graphe::kruskal(Graphe g)
                     if (j!=som1->getId())
                     {
                         tab[j]=tab[som2->getId()];
-
                     }
                 }
             }
-
                 tab[som1->getId()]=tab[som2->getId()];
-
         }
     }
-
     std::cout << std::endl;
 
     for (auto b : ar_kruskal)
     {
         b->afficher();
     }
-
-
-
 }
-
 
 
 void Graphe::afficherKruskal(Svgfile& svgout) const
@@ -189,6 +181,102 @@ void Graphe::afficherKruskal(Svgfile& svgout) const
           i->afficherKruska(svgout);
          }
 }
+
+std::vector<bool> Graphe::ConvertisseurBin(int n)
+{
+    int t[20];
+    int i=0;
+    int ordre=edges.size()-1;       // ordre = nb d'aretes -1
+
+    std::vector<bool> convert(edges.size(),0);
+    do
+    {
+        t[i]=n%2;
+        n=n/2;
+        i++;
+    }
+    while(n!=0);
+
+    for(int j=0;j<=i-1;j++)
+        {
+                convert[ordre]=t[j];
+                ordre--;
+        }
+    return convert;
+}
+
+void Graphe::bruteForce() const
+{
+    std::bitset<12> nb_bits;
+    std::vector<std::bitset<12>> domine ;       // pas optimales
+    std::vector<std::bitset<25>> non_domine ;   // optimales
+    for (int i=0; i<pow(2,taille); i++)
+    {
+        std::cout << "rania" << std::endl;
+        nb_bits=i;
+        if (nb_bits.count()==(sommets.size()-1))
+        {
+            std::cout << nb_bits << std::endl;
+            domine.push_back(nb_bits);
+            std::cout << "sol :" << std::endl;
+            for(auto bit : domine)
+                std::cout << bit;
+            std::cout << std::endl;
+        }
+    }
+
+    std::vector<Arete*> ccc ;
+    std::vector<std::vector<Arete*>> compo_connexes;
+    int a = pow(2,taille);
+    int tab[a];
+    for (int i=0; i<domine.size() ; i++)
+    {
+        for (int j=0; j<nb_bits.size(); j++)
+        {
+            if (domine[i].test(j)==1)
+            {
+                int cpt=0;
+                for (auto ar : edges)
+                {
+                    if (cpt == tab[edges.size()-j-1])
+                    {
+                        ccc.push_back(ar);
+                    }
+                    cpt = cpt + 1;
+                }
+            }
+        }
+        compo_connexes.push_back(ccc);
+        for (auto i: ccc)
+        {
+            std::cout << i << std::endl;
+        }
+        ccc.clear();
+
+    }
+
+}
+
+void Graphe::bruteForceFacile(){
+    int cpt=0;
+    std::vector<bool> tmp(taille,false);
+    for(int j=sommets.size()-1;j<taille;j++)
+        {
+        for(int i=0;i<j;i++){
+            tmp[i]=true;
+        }
+        std::sort(tmp.begin(),tmp.end());
+        do
+        {
+            cpt ++;
+            for(auto bit :tmp)
+            std::cout << bit;
+            std::cout << cpt << std::endl;
+        }
+        while(std::next_permutation(tmp.begin(),tmp.end()));
+    }
+}
+
 
 
 
